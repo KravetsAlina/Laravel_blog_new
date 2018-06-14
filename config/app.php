@@ -162,6 +162,9 @@ return [
         // Add ServiceProvider  my package
         Unisharp\Ckeditor\ServiceProvider::class,
 
+        //My own provider
+        App\Providers\BlogServiceProvider::class,
+
     ],
 
     /*
