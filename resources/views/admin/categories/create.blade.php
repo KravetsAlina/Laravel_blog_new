@@ -7,7 +7,7 @@
   @component('admin.components.breadcrumb')
     @slot('title') Создание категории @endslot
     @slot('parent') Главная @endslot
-    @slot('active') Категории @endslot
+    @slot('active') / Категории @endslot
   @endcomponent
 
   <hr />

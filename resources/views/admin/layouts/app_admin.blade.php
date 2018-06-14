@@ -41,6 +41,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                      <li>
+                        <a href="{{route('admin.index')}}">Панель состояния</a>
+                      </li>
                         <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Блог</a>
                           <ul class="dropdown-menu" role="menu">
@@ -89,6 +92,6 @@
         </main>
     </div>
     <script src="{{ asset('/vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script> 
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
