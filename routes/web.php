@@ -10,10 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/blog/category/{slug?}', 'BlogController@category')->name('category');
+Route::get('/blog/article/{slug?}', 'BlogController@article')->name('article');
+
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'midlleware'=>['auth']], function(){
-  Route::get('/', 'DashboardController@dashboard')->name('admin.index');
-  Route::resource('/category', 'CategoryController', ['as'=>'admin']);
-  Route::resource('/article', 'ArticleController', ['as'=>'admin']);
+Route::get('/', 'DashboardController@dashboard')->name('admin.index');
+Route::resource('/category', 'CategoryController', ['as'=>'admin']);
+Route::resource('/article', 'ArticleController', ['as'=>'admin']);
 });
 
 Route::get('/', function () {

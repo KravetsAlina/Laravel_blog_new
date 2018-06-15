@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
+    <meta name="keywords" content="@yield('meta_keyword')">
+    <meta name="description" content="@yield('meta_description')">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -22,9 +24,8 @@
 <body>
     <div id="app">
       @include('layouts.header')
-        <main class="py-4">
+
             @yield('content')
-        </main>
     </div>
 
     <!-- Latest compiled and minified JavaScript  -->

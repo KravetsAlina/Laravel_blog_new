@@ -2,7 +2,7 @@
 
   @if ($category->children->where('published', 1)->count())
     <li class="dropdown">
-      <a href="{{url('/blog/category/$category->slug')}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+      <a href="{{url("/blog/category/$category->slug")}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
         {{$category->title}} <span class="caret"></span>
       </a>
       <ul class="dropdown-menu" role="menu">
@@ -10,8 +10,7 @@
       </ul>
   @else
     <li>
-      <a href="{{url('/blog/category/$category->slug')}}">{{$category->title}}</a>
+      <a href="{{url("/blog/category/$category->slug")}}">{{$category->title}}</a>
   @endif
     </li>
-
 @endforeach
